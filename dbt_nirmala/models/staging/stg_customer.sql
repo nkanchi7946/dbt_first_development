@@ -1,4 +1,4 @@
 with customers as (
-select id as customer_id,first_name, last_name  from {{ source('raw','customers')}}
+select C_CUSTKEY as customer_id,C_NAME as name  from {{ source('raw','customers')}}
 )
 select * from customers

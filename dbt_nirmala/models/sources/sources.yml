@@ -11,7 +11,7 @@ models :
     - name : stg_customer
       description : List of customers in stage.
       columns:
-        - name  : customer_id
+        - name  : C_CUSTKEY
           description : unique Primary key customer id
           tests: 
             - unique
@@ -19,8 +19,8 @@ models :
     - name : stg_orders
       description : Orders created by customers
       columns :
-        - name : customer_id
+        - name : O_CUSTKEY
           description : customers which generated orders
-        - name : first_order_date
+        - name : O_ORDERDATE
           description : date the customer made first order
         
