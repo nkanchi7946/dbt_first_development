@@ -2,9 +2,10 @@ version: 2
 
 sources:
     - name: raw
-      database: dev
+      database: development
+      schema: raw
       tables:
-        - name : customers
+        - name : customer
         - name : orders
 
 models :
