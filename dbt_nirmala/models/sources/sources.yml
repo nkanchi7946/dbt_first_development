@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+    - name: raw
+      database: development
+      schema: raw
+      tables:
+        - name : customer
+        - name : orders
+
+models :
+    - name : stg_customer
+      description : List of customers in stage.
+      columns:
+        - name  : C_CUSTKEY
+          description : unique Primary key customer id
+          tests: 
+            - unique
+            - not_null
+    - name : stg_orders
+      description : Orders created by customers
+      columns :
+        - name : O_CUSTKEY
+          description : customers which generated orders
+        - name : O_ORDERDATE
+          description : date the customer made first order
+        
