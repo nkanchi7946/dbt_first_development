@@ -12,7 +12,7 @@ models :
     - name : stg_customer
       description : List of customers in stage.
       columns:
-        - name  : C_CUSTKEY
+        - name  : customer_id
           description : unique Primary key customer id
           tests: 
             - unique
